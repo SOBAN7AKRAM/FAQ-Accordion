@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color:  hsl(275, 100%, 97%);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+@font-face {
+    font-family: "Work Sans";
+    src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+body::before{
+    background: url('/assets/images/background-pattern-desktop.svg') no-repeat center center/cover;
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    z-index: -1;
+
+}
+
+.container{
+    font-family: 'Work Sans';
+    width: 34%;
+    height: 64%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 1rem 0rem hsl(0deg 0% 78.22%);
+}
+@media screen and (min-width: 767px) and (max-width: 1023px)
+{
+    .container{
+        width: 60%;
+        height: 60%;
+    } 
+}
+@media  screen and (max-width: 767px) {
+    .container{
+        width: 80%;
+        height: 70%;
+    } 
+}
+.heading{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0.5rem;
+}
+.heading > img{
+    display: inline-block;
+    width: 1.5rem;
+    height: 2.5rem;
+    padding: 1rem;
+}
+.container h1{
+    display: inline-block;
+    font-family: 'Work Sans';
+    font-size: 2.3rem;
+}
+.questionsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.questions{
+    border-bottom: 1px solid hsl(292deg 11.22% 85.98%);
+    padding: 20px 0px;
+    margin: 0px 25px;
+}
+.questions h6{
+    position: relative;
+    font-size: 12px;
+    color: hsl(292, 42%, 14%);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    padding-right: 5%;
+}
+.questions h6::before{
+    background-image: url(/assets/images/icon-plus.svg);
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+}
+.questions:hover h6{
+    cursor: pointer;
+    color: hsl(291, 40%, 53%);
+    /* color: hsl(275, 100%, 97%); */
+}
+/* .questions:hover h6{
+    color: hsl(292, 42%, 14%);
+} */
+.questions.active h6::before{
+    background-image: url(/assets/images/icon-minus.svg);
+}
+.questions p{
+   font-size: 12px;
+   position: relative;
+   overflow: hidden;
+   height: 0;
+   overflow-y: auto;
+}
+.questions.active p{
+    color: hsl(292, 16%, 49%);
+    padding-top: 12px;
+    height: 20%;
+}
