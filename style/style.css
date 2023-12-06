@@ -16,7 +16,7 @@ body{
     src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
 }
 body::before{
-    background: url("../assets/images/background-pattern-desktop.svg") no-repeat center center/cover;
+    background: url("/FAQ-Accordion/assets/images/background-pattern-desktop.svg") no-repeat center center/cover;
     content: "";
     top: 0;
     left: 0;
