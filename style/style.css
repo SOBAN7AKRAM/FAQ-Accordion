@@ -16,7 +16,7 @@ body{
     src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
 }
 body::before{
-    background: url('/assets/images/background-pattern-desktop.svg') no-repeat center center/cover;
+    background: url('background-pattern-desktop.svg') no-repeat center center/cover;
     content: "";
     top: 0;
     left: 0;
@@ -82,7 +82,7 @@ body::before{
     padding-right: 5%;
 }
 .questions h6::before{
-    background-image: url(/assets/images/icon-plus.svg);
+    background-image: url(icon-plus.svg);
     background-size: cover;
     content: "";
     position: absolute;
@@ -95,13 +95,10 @@ body::before{
 .questions:hover h6{
     cursor: pointer;
     color: hsl(291, 40%, 53%);
-    /* color: hsl(275, 100%, 97%); */
 }
-/* .questions:hover h6{
-    color: hsl(292, 42%, 14%);
-} */
+
 .questions.active h6::before{
-    background-image: url(/assets/images/icon-minus.svg);
+    background-image: url(icon-minus.svg);
 }
 .questions p{
    font-size: 12px;
